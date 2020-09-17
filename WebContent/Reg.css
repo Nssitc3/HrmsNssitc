@@ -171,8 +171,7 @@ margin-top: 10px;
   vertical-align: middle;
   margin: 0 4px;
 }
- 
-.submit {
+ .submit {
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
@@ -188,7 +187,6 @@ margin-top: 10px;
   background-color: red;
   border: 2px solid black;
 }
- 
 .wave {
   position: absolute;
   top: 0;
