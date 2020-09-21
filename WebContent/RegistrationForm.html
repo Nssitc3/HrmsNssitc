@@ -1,112 +1,175 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Registration Form | nssitc.com</title>
-  
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>CSS Registration Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="Reg.css">
+    </head>
+    <body>    
+        <form action="" class="register">
+            <h1>Registration</h1>
+            <fieldset class="row1">
+                <legend>Account Details
+                </legend>
+                 <p>
+                    <label>username *
+                    </label>
+                    <input type="text"/>
+                    <label>EmpID *
+                    </label>
+                    <input type="text"/>
+                </p>
+                <p>
+                    <label>Email *
+                    </label>
+                    <input type="text"/>
+                    <label>Repeat email *
+                    </label>
+                    <input type="text"/>
+                </p>
+                <p>
+                    <label>Password*
+                    </label>
+                    <input type="text"/>
+                    <label>Repeat Password*
+                    </label>
+                    <input type="text"/>
+                    <label class="obinfo">* obligatory fields
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset class="row2">
+                <legend>Personal Details
+                </legend>
+                <p>
+                    <label>Name *
+                    </label>
+                    <input type="text" class="long"/>
+                </p>
+                <p>
+                    <label>Phone *
+                    </label>
+                    <input type="text" maxlength="10"/>
+                </p>
+                <p>
+                    <label class="optional">Street
+                    </label>
+                    <input type="text" class="long"/>
+                </p>
+                <p>
+                    <label>City *
+                    </label>
+                    <input type="text" class="long"/>
+                </p>
+                <p>
+                    <label>Country *
+                    </label>
+                    <select>
+                        <option>
+                        </option>
+                        <option value="1">United States
+                        </option>
+                    </select>
+                </p>
+                <p>
+                    <label class="optional">adress
+                    </label>
+                    <input class="long" type="text" value="">
 
-      <link rel="stylesheet" href="Reg.css">
-
-  
-</head>
-
-<body>
-
-  <div class="row">
-  <section class="section">
-    <header>
-      <h3>Register</h3>
-      <h4>Please fill your information in this form</h4>
-    </header>
-    <main>
-      <form>
-        <div class="form-item box-item">
-          <input type="text" name="name" class="tx1" placeholder="Name" data-required>
-          <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-        </div>
-        <div class="form-item box-item">
-          <input type="email" name="email" class="tx1" placeholder="Email" data-email data-required>
-          <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-          <small class="errorEmail"><i class="fa fa-asterisk" aria-hidden="true"></i> email is not valid</small>
-        </div>
-        <div class="form-item box-item">
-          <div class="form-item-triple">
-            <div class="radio-label"> 
-              <label class="label">Gender</label>
-            </div>
-            <div class="form-item"> 
-              <input id="Male" type="radio" name="gender" value="Male" data-once>
-              <label for="Male">Male</label>
-            </div>
-            <div class="form-item"> 
-              <input id="Female" type="radio" name="gender" value="Female" data-once>
-              <label for="Female">Female</label>
-            </div>
-          </div>
-          <small class="errorOnce"><i class="fa fa-asterisk" aria-hidden="true"></i> choose at least one</small>
-        </div>
-        <div class="form-item box-item">
-          <div class="form-item-triple">
-            <div class="radio-label"> 
-              <label class="label">Account Type</label>
-            </div>
-            <div class="form-item"> 
-              <input id="sponsored" type="radio" name="gender2" value="sponsored" data-once>
-              <label for="sponsored">admin</label>
-            </div>
-            <div class="form-item"> 
-              <input id="paid" type="radio" name="gender2" value="paid" data-once>
-              <label for="paid">employe</label>
-            </div>
-          </div>
-          <small class="errorOnce"><i class="fa fa-asterisk" aria-hidden="true"></i> choose at least one</small>
-        </div>
-        <div class="form-item box-item">
-          <input type="text" name="username1" placeholder="Username" data-required>
-          <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-        </div>
-        <div class="form-item box-item">
-          <div class="form-item-triple">
-            <div class="radio-label"> 
-              <label class="label">branch</label>
-            </div>
-            <div class="form-item"> 
-              <input id="banglore" type="radio" name="branch" value="Male" data-once>
-              <label for="banglore">banglore</label>
-            </div>
-            <div class="form-item"> 
-              <input id="chennai" type="radio" name="branch" value="chennai" data-once>
-              <label for="chennai">chennai</label>
-            </div>
-          </div>
-          <small class="errorOnce"><i class="fa fa-asterisk" aria-hidden="true"></i> choose at least one</small>
-        </div>
-        <div class="form-item-double box-item">
-          
-          <div class="form-item">
-            <input type="text" name="zCode" placeholder="Zip Code" data-required data-number>
-            <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-            <small class="errorNum"><i class="fa fa-asterisk" aria-hidden="true"></i> must be a number</small>
-          </div>
-        </div>
-        <div class="form-item box-item">
-          <input type="text" name="phone" placeholder="Phone" data-required data-number data-count="10">
-          <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-          <small class="errorNum"><i class="fa fa-asterisk" aria-hidden="true"></i> must be a number</small>
-          <small class="errorChar"><i class="fa fa-asterisk" aria-hidden="true"></i> must be 10 digits</small>
-        </div>
-        <div class="form-item box-item">
-          <input type="file" id="myFile" name="filename">adressproof
-          </div>
-        <div class="form-item">
-          <span id="submit" class="submit">Submit</span>
-        </div>
-       </form>
-    </main><i class="wave"></i>
-  </section>
-</div>
-  </body>
-
+                </p>
+                <p>
+                    <label>Adhaar copy *
+                    </label>
+                    <input type="file" class="long"/>
+                </p>
+            </fieldset>
+            <fieldset class="row3">
+                <legend>Further Information
+                </legend>
+                <p>
+                    <label>Gender *</label>
+                    <input type="radio" value="radio"/>
+                    <label class="gender">Male</label>
+                    <input type="radio" value="radio"/>
+                    <label class="gender">Female</label>
+                </p>
+              <p>
+                    <label>date of birth *
+                    </label>
+                    <input type="date" class="long"/>
+                </p>
+                <p>
+                    <label>Nationality *
+                    </label>
+                    <select>
+                        <option value="0">
+                        </option>
+                        <option value="1">United States
+                        </option>
+                    </select>
+                </p>
+            </fieldset>
+             <fieldset class="row3">
+                <legend>Employee type 
+                </legend>
+                 <p>
+                    <label>category *
+                    </label>
+                    <select>
+                        <option value="0">
+                        </option>
+                        <option value="1">Employee
+                        </option>
+                         <option value="2">admin
+                        </option>
+                    </select>
+                </p>
+                 <p>
+                    <label>Branch*
+                    </label>
+                    <select>
+                        <option value="0">
+                        </option>
+                        <option value="1">chennai
+                        </option>
+                         <option value="2">banglore
+                        </option>
+                        <option value="3">dubai
+                        </option>
+                    </select>
+                </p>
+                 <p>
+                    <label>status*
+                    </label>
+                    <select>
+                        <option value="0">
+                        </option>
+                        <option value="1">permanent staff
+                        </option>
+                         <option value="2">trainee
+                        </option>
+                    </select>
+                </p>
+         </fieldset>
+            <fieldset class="row4">
+                <legend>Terms and Mailing
+                </legend>
+                <p class="agreement">
+                    <input type="checkbox" value=""/>
+                    <label>*  I accept the <a href="#">Terms and Conditions</a></label>
+                </p>
+                <p class="agreement">
+                    <input type="checkbox" value=""/>
+                    <label>we received personalized information from employee</label>
+                </p>
+            </fieldset>
+            </fieldset>
+            <div><button class="button">Register &raquo;</button></div>
+        </form>
+    </body>
 </html>
+
+
+
+
+
